@@ -1,0 +1,37 @@
+.notfound-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.notfound-img {
+  width: 269px;
+  height: 297px;
+}
+
+.notfound-text {
+  color: #989898;
+}
+
+.home-page-link {
+  background-color: #6da0cb;
+  color: #ffffff;
+  width: 141px;
+  height: 48px;
+  border-style: none;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .notfound-img {
+    width: 157px;
+    height: 173px;
+  }
+}

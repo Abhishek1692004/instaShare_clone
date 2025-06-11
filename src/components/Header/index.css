@@ -1,0 +1,183 @@
+.header-section {
+  border-bottom: 1px solid #c6c6c8;
+  background-color: white;
+}
+
+.header-container {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.website-logo-container {
+  width: 173px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-website-logo {
+  width: 59px;
+}
+
+.header-website-name {
+  font-size: 20px;
+}
+
+.header-list {
+  list-style-type: none;
+  padding-left: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 450px;
+  height: 30px;
+}
+
+.search-container {
+  width: 214px;
+  height: 28px;
+  background-color: #dbdbdb;
+  display: flex;
+  align-items: center;
+  border-radius: 2px;
+  padding: 3px;
+}
+
+.search-input {
+  width: 200px;
+  height: 23px;
+  outline: none;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-style: none;
+  padding: 10px;
+}
+
+.search-btn {
+  cursor: pointer;
+  border-style: none;
+  background-color: transparent;
+  padding-top: 5px;
+}
+
+.link-style {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.selected-link {
+  color: #4094ef;
+  font-size: 16px;
+}
+
+.select-link {
+  font-weight: 400;
+}
+
+.logout-btn {
+  background-color: #4094ef;
+  color: #ffffff;
+  border-radius: 7px;
+  width: 82px;
+  height: 32px;
+  cursor: pointer;
+  border-style: none;
+}
+
+.hamburger-icon-btn {
+  display: none;
+}
+
+.hamburger-icon-list {
+  display: none;
+}
+
+.search-container-sm {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .header-section {
+    padding-left: 30px;
+    padding-right: 30px;
+    border-bottom: none;
+    background-color: #fafafa;
+  }
+
+  .header-container {
+    justify-content: space-between;
+  }
+
+  .header-list {
+    display: none;
+  }
+
+  .header-website-logo {
+    width: 55px;
+    height: 28px;
+  }
+
+  .header-website-name {
+    font-size: 18px;
+  }
+
+  .hamburger-icon-btn {
+    display: flex;
+    background-color: transparent;
+    border-style: none;
+  }
+
+  .hamburger-icon-list {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    list-style-type: none;
+    padding-left: 0px;
+  }
+
+  .remove-hamburger-list {
+    display: none;
+  }
+
+  .close-btn {
+    border-style: none;
+    background-color: transparent;
+  }
+
+  .search-container-sm {
+    display: flex;
+    width: 280px;
+    height: 28px;
+    background-color: #dbdbdb;
+    align-items: center;
+    border-radius: 2px;
+    padding: 3px;
+    margin-bottom: 10px;
+  }
+
+  .search-input-sm {
+    width: 260px;
+    height: 24px;
+    outline: none;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    border-style: none;
+    padding: 10px;
+  }
+
+  .search-caption-btn {
+    border-style: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .remove-search {
+    display: none;
+  }
+}
