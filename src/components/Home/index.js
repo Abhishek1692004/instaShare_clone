@@ -134,7 +134,7 @@ class Home extends Component {
   )
 
   onFailedPostsFetch = () => (
-    <div className="failed-fetch-container">
+    <div className="post-failed-fetch-container">
       <img
         src="https://res.cloudinary.com/dojo8unri/image/upload/v1748774560/alert-triangle_mycg2e.png"
         alt="failure view"

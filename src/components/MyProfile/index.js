@@ -139,7 +139,7 @@ class MyProfile extends Component {
         {posts.length > 0 ? (
           <ul className="posts-list">
             {posts.map(post => (
-              <li key={post.id}>
+              <li key={post.id} className="post-item">
                 <img src={post.image} alt="my post" className="post-image" />
               </li>
             ))}

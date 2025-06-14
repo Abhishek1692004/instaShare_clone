@@ -65,7 +65,22 @@
   display: none;
 }
 
+.post-failed-fetch-container {
+  height: 866px;
+  border: 1px solid #dbdbdb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-radius: 5px;
+}
+
 @media screen and (max-width: 767px) {
+  .post-failed-fetch-container {
+    border: none;
+  }
+
   .try-search-container {
     display: flex;
     flex-direction: column;

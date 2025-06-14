@@ -45,6 +45,10 @@ class Header extends Component {
             searchBtnDisplay,
             onSearchBtnSelectSM,
           } = value
+          const {location} = this.props
+          const isActive = path =>
+            location.pathname === path ? 'active-style' : ''
+          const searchStyle = searchBtnDisplay ? 'active-style' : ''
           const onHomeRoute = () => {
             homeRoute()
             if (searchBtnDisplay) searchToggle()
@@ -62,12 +66,7 @@ class Header extends Component {
             const {history} = this.props
             history.replace('/login')
           }
-          const toHome = () => {
-            const {history, location} = this.props
-            if (location.pathname !== '/') {
-              history.push('/')
-            }
-          }
+
           const {searchInput, hamburgerSelect} = this.state
           /*
           const removeHamburgerListDisplay = !hamburgerSelect
@@ -109,13 +108,13 @@ class Header extends Component {
                     </button>
                   </li>
                   <li>
-                    <Link to="/" className="link-style" onClick={homeRoute}>
-                      <p className="selected-link">Home</p>
+                    <Link to="/" className="link-style" onClick={onHomeRoute}>
+                      <p className={isActive('/')}>Home</p>
                     </Link>
                   </li>
                   <li>
-                    <Link to="/my-profile" className="link-style">
-                      <h3 className="select-link">Profile</h3>
+                    <Link to="/my-profile" className="link-style profile-style">
+                      <h3 className={isActive('/my-profile')}>Profile</h3>
                     </Link>
                   </li>
                   <li>
@@ -145,8 +144,10 @@ class Header extends Component {
               {hamburgerSelect && (
                 <ul className="hamburger-icon-list">
                   <li>
-                    <Link to="/" className="link-style" onClick={toHome}>
-                      <p>Home</p>
+                    <Link to="/" className="link-style" onClick={onHomeRoute}>
+                      <p className={searchBtnDisplay ? '' : isActive('/')}>
+                        Home
+                      </p>
                     </Link>
                   </li>
                   <li>
@@ -155,7 +156,7 @@ class Header extends Component {
                       className="search-caption-btn link-style"
                       onClick={() => onSearchBtnSelectSM(onDisplayToggle)}
                     >
-                      <p>Search</p>
+                      <p className={searchStyle}>Search</p>
                     </button>
                   </li>
                   <li>
@@ -164,7 +165,7 @@ class Header extends Component {
                       className="link-style"
                       onClick={profilePage}
                     >
-                      <p>Profile</p>
+                      <p className={isActive('/my-profile')}>Profile</p>
                     </Link>
                   </li>
                   <li>
